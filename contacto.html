@@ -38,23 +38,24 @@
   <!--Contenido-->
   <div class="container mt-5">
     <h2 class="text-center mb-4">Contáctanos</h2>
+
     <form action="" method="">
       <div class="mb-3">
         <label for="Nombre" class="form-label">Nombre:</label>
-        <input type="text" id="Nombre" class="form-control">
+        <input type="text" id="nombre" class="form-control" name="Nombre" >
       </div>
 
       <div class="mb-3">
-        <label for="Email" class="form-label">Email:</label>
-        <input type="text" id="Email" class="form-control">
+        <label for="Correo" class="form-label">Correo:</label>
+        <input type="text" id="correo" class="form-control">
       </div>
 
       <div class="mb-3">
         <label for="Mensaje" class="form-label"> Mensaje</label>
-        <textarea name="" id="Mensaje" class="form-control" row="4" ></textarea>
+        <textarea name="" id="mensaje" class="form-control" row="4" ></textarea>
       </div>
       <div class="d-grid gap-2">
-      <button class="btn btn-success">Enviar</button>
+      <button class="btn btn-success" onclick="contactar()">Enviar</button>
       <input type="reset" value="Limpiar" class="btn btn-danger">
       </div>
     </form>
@@ -75,5 +76,6 @@
 
  <script src="js/bootstrap.bundle.min.js"></script>
      
+  <script src="js/contacto.js"></script>
   </body>
 </html>
