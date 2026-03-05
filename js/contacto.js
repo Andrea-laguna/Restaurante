@@ -4,29 +4,43 @@ function contactar(){
     //let mensaje = document.getElementById('mensaje').value
 
 
-    //if(!nombre || !correo || !mensaje){
+    //if(!nombre || !correo || !mensaje ){
        // alert('📍Error faltan datos')
-    //}
-
+   // }
     //else{
-        //alert(nombre + "✏️Su mensaje ha sido enviado. Gracias por contactarnos!");
-    //}
-    //alert(nombre)
-    //alert(correo)
-    //alert(mensaje)
+      //  alert(nombre + "🖍️ Su mensaje ha sido enviado, gracias por contactarnos")
+   // }
 
-   let bolsa = document.querySelectorAll('.form-control');
-   let nombre= bolsa[0].value;
-   for (let i = 0; i < bolsa.length; i++) {
-    const elemento = bolsa[i].value; //el array se llama bolsa 
-    if(!nombre || !correo || !mensaje){
-        alert("Error... Faltan datos!")
-        return;//encuentra un campop vacio y de una se sale 
+
+
+    let bolsa = document.querySelectorAll('.form-control');
+
+    
+    nombre= bolsa[0].value;
+    correo=bolsa[1].value;
+    mensaje=bolsa[2].value;
+
+    for (let i = 0; i < bolsa.length; i++) {
+      const elemento = bolsa[i].value; //el array se llama bolsa
+
+    if(!nombre || !correo || !mensaje ){
+        Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "FALTAN DATOS!!!",
+});
+        return; //Encuentra un campo vacio y de una sale
     }
     else{
-        alert(nombre+ "✏️Su mensaje ha sido enviado. Gracias por contactarnos!.")
+        Swal.fire({
+  title: "Excelente!",
+  text: "Hemos recibido tus datos!",
+  icon: "success"
+});
         return;
     }
-    
-   }
+      
+    }
+
+
 }

@@ -1,4 +1,4 @@
-function reservar() {
+function reservar(){
 
     let bolsa = document.querySelectorAll(".form-control, .form-select");
 
@@ -10,14 +10,23 @@ function reservar() {
 
     if (!nombre || !correo || !fecha || !hora || !personas) {
 
-        alert("❌ Error, faltan datos");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Faltan datos!",
+  
+     });
+
         return;
 
-    } else {
+    } 
+    else {
 
-        alert(nombre + 
-        ", tu reserva fue enviada correctamente para el " 
-        + fecha + " a las " + hora);
+        Swal.fire({
+          title: "Muy bien!",
+         text: "Hemos reservado tu mesa!",
+         icon: "success"
+       });
 
     }
 }
